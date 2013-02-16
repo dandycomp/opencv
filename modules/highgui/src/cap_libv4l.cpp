@@ -260,7 +260,7 @@ make & enjoy!
 
 // default and maximum number of V4L buffers, not including last, 'special' buffer
 #define MAX_V4L_BUFFERS 10
-#define DEFAULT_V4L_BUFFERS 4
+#define DEFAULT_V4L_BUFFERS 1
 
 // if enabled, copies data from the buffer. this uses a bit more memory,
 //  but much more reliable for some UVC cameras
@@ -499,7 +499,7 @@ static void v4l2_scan_controls_enumerate_menu(CvCaptureCAM_V4L* capture)
     {
       //printf (" %s\n", capture->querymenu.name);
     } else {
-        perror ("VIDIOC_QUERYMENU");
+        // perror ("VIDIOC_QUERYMENU");
     }
   }
 }
